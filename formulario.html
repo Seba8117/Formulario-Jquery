@@ -14,14 +14,16 @@
     $(document).ready(function(){
         $("#formulario").validate();
     });
+    
 
     </script>
 </head>
 <body>
+    
     <form id ="formulario"action ="" method="post">
         <p>
-            <label for="name">Nombre<span>(Obligatorio, al menos 3 caracteres)</span> </label>
-            <input id = "name" name="name" minlength="3" type="text" required>
+            <label for="name">Nombre Completo<span>(Obligatorio)</span> </label>
+            <input id = "name" name="name" minlength="1" type="text" required>
 
         </p>
         <p>
@@ -29,10 +31,35 @@
             <input id = "email" name="email" type="email"  required>
 
         </p>
+        <p>
+            <label for="rut">Rut<span>(solo con guion)</span> </label>
+            <input id = "rut" name="rut" minlength="10" required>
+
+        </p>
+        <p>
+            <label for="numero">Numero celular<span>(opcional anteponer 9)</span> </label>
+            <input id = "numero" name="numero" type="number" minlength="9" >
+
+        </p>
+        <p>
+            <label for="ciudad">Ciudad o residencia<span>(obligatorio)</span> </label>
+            <input id = "ciudad" name="ciudad" minlength="5" type="text" required >
+
+        </p>
+        <p>
+            <label for="comentario">¿Por que te gustaria participar en la ONG?<span>(obligatorio)</span> </label>
+            <input id = "comentario" name="comentario" minlength="50" type="text" required >
+
+        </p>
+
+
 
         <p>
-            <input class="submit" type="submit" value="submit">
+            <input type="reset" value="LIMPIAR">
+            <input class="submit" type="submit" value="ENVIAR"> 
         </p>
+        
+        
 
 
 
